@@ -22,7 +22,7 @@ if uploaded_file is not None:
   st.subheader("📊 Historical Data Preview")
   with st.expander("Preview Excel Dataset"):
       st.dataframe(
-      data, #Display all rows
+      df, #Display all rows
       hide_index = True, #To hide index column
       use_container_width = True #Use all available space to display
       )
