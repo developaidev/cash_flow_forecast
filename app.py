@@ -22,9 +22,9 @@ if uploaded_file is not None:
   st.subheader("📊 Historical Data Preview")
   with st.expander("Preview Excel Dataset"):
       st.dataframe(
-      data.head(36),
-      hide_index = True,
-      use_container_wide = True
+      data, #Display all rows
+      hide_index = True, #To hide index column
+      use_container_width = True #Use all available space to display
       )
 
   # Check if required columns exist
