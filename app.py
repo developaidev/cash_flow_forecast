@@ -68,8 +68,9 @@ if uploaded_file is not None:
         "Projected Revenue": pred_rev,
         "Projected Expense": pred_exp,
         "Projected Profit": pred_profit,
+    }
         hide_index = True, #To hide index column
-    })
+    )
 
     st.subheader("🚀 Forecast Results")
     st.dataframe(
