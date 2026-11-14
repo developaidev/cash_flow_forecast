@@ -83,9 +83,9 @@ if uploaded_file is not None:
     # Plotting interactive charts using Streamlit
     st.subheader("📈 Financial Trends Chart")
     chart_data = pd.DataFrame({
-        "Revenue": np.concatenate([df["Revenue"], pred_rev]),
-        "Expense": np.concatenate([df["Expense"], pred_exp]),
-    }, index=np.concatenate([df["Month"], future_months_list]))
+        "Revenue": np.concatenate([df["Revenue"], pred_rev]), #Join historical rev eg M01-M12 (df["Revenue"]) with future predicted result eg: M13 onwards
+        "Expense": np.concatenate([df["Expense"], pred_exp]), #Join historical exp eg M01-M12 (df["Expense"]) with future predicted result eg: M13 onwards
+    }, index=np.concatenate([df["Month"], future_months_list])) #Join historical mths eg M01-M12 (df["Month"]) with future months eg: M13 onwards
 
     st.line_chart(chart_data)
 
