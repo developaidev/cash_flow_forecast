@@ -12,7 +12,7 @@ st.write(
 # 1. File Uploader for Excel
 uploaded_file = st.file_uploader(
     "Upload Excel file (Must contain columns: Month, Revenue, Expense)",
-    type=["financial_info.xlsx"],
+    type=["xlsx"],
 )
 
 if uploaded_file is not None:
