@@ -39,6 +39,7 @@ if uploaded_file is not None:
     model_expense = LinearRegression().fit(X, df["Expense"])
 
     # User Input: How many months to forecast?
+    # st.slider(label, min_value, max_value, value, step)
     st.subheader("🔮 Forecast Settings")
     months_ahead = st.slider(
         "Select number of months to forecast into the future:", 1, 12, 3  #1 as minimum, 12 as maximum, while 3 as starting default
@@ -70,6 +71,7 @@ if uploaded_file is not None:
         "Projected Profit": pred_profit,
     })
 
+    # The column sequence is following dictionary created under pd.DataFrame
     st.subheader("🚀 Forecast Results")
     st.dataframe(
         forecast_df.style.format({
