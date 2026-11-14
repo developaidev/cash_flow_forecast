@@ -20,7 +20,12 @@ if uploaded_file is not None:
   df = pd.read_excel(uploaded_file)
 
   st.subheader("📊 Historical Data Preview")
-  st.dataframe(df.head())
+  with st.expander("Preview Excel Dataset"):
+      st.dataframe(
+      data.head(36),
+      hide_index = True,
+      use_container_wide = True
+      )
 
   # Check if required columns exist
   required_cols = ["Month", "Revenue", "Expense"]
