@@ -78,7 +78,6 @@ if uploaded_file is not None:
             "Projected Profit": "${:.2f}k",
         }),
         hide_index=True,  # To hide index column
-        use_container_width=True,  # Use all available space
     )
 
     # Plotting interactive charts using Streamlit
